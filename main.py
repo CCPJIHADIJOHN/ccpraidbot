@@ -12,6 +12,8 @@ from commands.btalk import btalk_command
 from commands.bttsspam import bttsspam_command
 from commands.send import send_command
 from commands.bghost import bghostping_command
+from commands.embedspam import embedspam_command
+from commands.bembed import bembedspam_command
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -26,6 +28,8 @@ commandapi.add_command("btalk", btalk_command, "sends talk via button")
 commandapi.add_command("btts", bttsspam_command, "sends tts via button")
 commandapi.add_command("send", send_command, "Send the raid textwall normally")
 commandapi.add_command("bghost", bghostping_command, "ghost ping via button")
+commandapi.add_command("embedspam", embedspam_command, "Send preset embeds")
+commandapi.add_command("bembedspam", bembedspam_command, "Send preset embeds via button")
 
 @bot.event
 async def on_ready():
