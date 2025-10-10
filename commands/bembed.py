@@ -27,8 +27,8 @@ def build_embed():
         color=random_color()
     )
 
-    embed.set_author(name="Author Line", icon_url="https://cdn.discordapp.com/embed/avatars/0.png")
-    embed.set_footer(text="Main Footer • Extra info here")
+    embed.set_author(name="CCP THUGS", icon_url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR23cbYLwYJyL25LuH-ov6RO7rn-OUnNV2Neg&s")
+    embed.set_footer(text="BRO I HATE ⁠N⁠I⁠G⁠G⁠E⁠R⁠S⁠ • EST 2025")
     img = random_image()
     if img:
         embed.set_image(url=f"attachment://{os.path.basename(img)}")
@@ -37,9 +37,18 @@ def build_embed():
 class ExtraButtons(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
-        self.add_item(discord.ui.Button(label="NIGGERS", style=discord.ButtonStyle.gray))
-        self.add_item(discord.ui.Button(label="FAGGOTS", style=discord.ButtonStyle.blurple))
-        self.add_item(discord.ui.Button(label="SPICS", style=discord.ButtonStyle.red))
+
+    @discord.ui.button(label="NIGGERS", style=discord.ButtonStyle.gray)
+    async def button1(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("WE WUZ KANGZ AND SHIT!", ephemeral=False)
+
+    @discord.ui.button(label="FAGGOTS", style=discord.ButtonStyle.blurple)
+    async def button2(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("DONT MISGENDER ME YOU BIGOT!", ephemeral=False)
+
+    @discord.ui.button(label="KIKES", style=discord.ButtonStyle.red)
+    async def button3(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("OY VEY THATS ANTISEMITIC", ephemeral=False)
 
 class EmbedButton(discord.ui.View):
     def __init__(self, count: int = 10):
