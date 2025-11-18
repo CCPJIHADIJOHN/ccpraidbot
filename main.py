@@ -16,6 +16,7 @@ from commands.heil import heil_command
 from commands.andrewtate import andrewtate_command
 from commands.spamping import spam_command
 from commands.security import security_command
+from commands.test import test_command
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -34,6 +35,7 @@ commandapi.add_command("heil", heil_command, "the third reich")
 commandapi.add_command("andrewtate", andrewtate_command, "my name is andrew tate and you are a fucking nigger")
 commandapi.add_command("spamping", spam_command, "like ghost ping but doesnt delete")
 commandapi.add_command("security", security_command, "scare a nigga with this command")
+commandapi.add_command("test", test_command, "to test if the server allows bots perms")
 
 
 @bot.event
